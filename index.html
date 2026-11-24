@@ -1,351 +1,56 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101521"><title>시선 | Poetry Spectrum</title><style>:root{color-scheme:dark;--bg:#101521;--panel:#171e2c;--panel2:#1d2636;--line:#2c374a;--fg:#f0f2f8;--muted:#a4b0c4;--accent:#a9a0ff;--ink:#111827}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:14px/1.65 system-ui,-apple-system,'Malgun Gothic',sans-serif}body.light{color-scheme:light;--bg:#f1f3f8;--panel:#fff;--panel2:#eef0f7;--line:#d4dae6;--fg:#172033;--muted:#526078;--accent:#5b46b7;--ink:#111827}button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 12px}button:hover,button:focus-visible{border-color:var(--accent)}a{color:var(--accent);overflow-wrap:anywhere}header{height:68px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:var(--panel)}.brand{display:flex;align-items:center;gap:12px;color:var(--fg);font-size:23px;font-weight:750;text-decoration:none}.logo{display:grid;place-items:center;width:39px;height:39px;border-radius:10px;background:#7464de;color:white;font-family:serif}.brand small{display:block;font-size:9px;letter-spacing:2px;color:var(--muted);line-height:1.1}.topright{display:flex;align-items:center;gap:16px}.status{color:#34d399;font-size:10px;letter-spacing:1px}.shell{display:grid;grid-template-columns:250px minmax(0,1fr);max-width:1600px;margin:auto}aside{border-right:1px solid var(--line);padding:24px 16px;min-width:0}.aside-title{letter-spacing:2px;font-size:11px;color:var(--muted);display:flex;justify-content:space-between;margin-bottom:12px}input,select,textarea{background:var(--bg);border:1px solid var(--line);border-radius:8px;width:100%;padding:10px;min-width:0}aside input,aside select{margin-bottom:9px}#poemList{display:grid;gap:5px}.poemBtn{display:flex;gap:9px;text-align:left;background:transparent;border-color:transparent;align-items:center;padding:10px 9px;width:100%;min-width:0}.poemBtn.on{background:var(--panel2);border-color:var(--accent)}.poemBtn span:nth-child(2){min-width:0;overflow-wrap:anywhere}.poemBtn b,.poemBtn small{display:block}.poemBtn small,.tiny{color:var(--muted);font-size:11px}.dot{display:inline-block;border-radius:50%;width:9px;height:9px;flex:none}main{padding:28px 30px;min-width:0}.intro{background:radial-gradient(ellipse at top right,#7664d52b,transparent 65%),var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px}.eyebrow{font-size:10px;font-weight:700;letter-spacing:2px;color:var(--accent)}h1{font-size:clamp(25px,4vw,39px);margin:6px 0;letter-spacing:-1.5px;line-height:1.25}h2{font-size:21px;letter-spacing:-.5px;margin:5px 0 12px}h3{font-size:15px;margin:0 0 10px}p{margin:8px 0;color:var(--muted)}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:22px}.metrics div{border-top:1px solid var(--line);padding-top:10px}.metrics b{font-size:25px;display:block;font-variant-numeric:tabular-nums;line-height:1.3}.metrics span{color:var(--muted);font-size:11px}nav{display:flex;gap:5px;flex-wrap:wrap;margin:20px 0}nav button{border:none;background:transparent;color:var(--muted)}nav button.active{background:var(--panel2);color:var(--fg);box-shadow:inset 0 -2px var(--accent)}.panel{display:grid;gap:14px}.panel[hidden]{display:none}.card{padding:20px;background:var(--panel);border:1px solid var(--line);border-radius:14px;min-width:0;overflow-wrap:anywhere}.two{display:grid;grid-template-columns:1.05fr 1fr;gap:14px;min-width:0}.poem-title{font-family:Georgia,'Batang','Noto Serif CJK KR',serif;font-size:29px;line-height:1.4;letter-spacing:-.8px}.poemline{display:grid;grid-template-columns:25px minmax(0,1fr);gap:8px;margin:4px 0;font-family:Georgia,'Batang','Noto Serif CJK KR',serif;font-size:16px;line-height:1.85}.poemline .num{color:var(--muted);font:10px/2.9 system-ui}.stanza{height:14px}.hit{display:inline;background:transparent;border:0;border-bottom:2px solid var(--c);border-radius:0;padding:0;color:inherit;font:inherit}.hit:hover{background:var(--panel2)}.evidence{padding:9px 12px;background:var(--panel2);border-radius:8px;font-size:12px;margin-top:12px;min-height:39px}.source{font-size:11px;color:var(--muted);margin-top:20px}.barrow{display:grid;grid-template-columns:53px minmax(0,1fr) 38px;align-items:center;gap:10px;margin:9px 0;font-size:12px}.track{height:8px;background:var(--panel2);border-radius:10px;overflow:hidden}.fill{height:100%;border-radius:10px}.big{font-size:27px;font-weight:750}.pill{display:inline-block;padding:4px 9px;border:1px solid var(--line);border-radius:20px;font-size:11px;margin:2px}.muted{color:var(--muted)}.reading{border-top:1px solid var(--line);margin-top:18px;padding-top:15px}.reading p{color:var(--fg)}.reading dl{display:grid;grid-template-columns:70px 1fr;gap:6px;margin:12px 0}.reading dt{color:var(--muted)}.reading dd{margin:0}.chart{width:100%;height:auto;display:block;color:var(--fg);overflow:visible}.chart text{font-family:system-ui,sans-serif;fill:var(--muted);font-size:10px}.legend{display:flex;gap:10px;flex-wrap:wrap;font-size:11px;color:var(--muted)}.legend span{display:inline-flex;align-items:center;gap:5px}.flow{display:grid;gap:5px}.flowline{display:grid;grid-template-columns:28px minmax(0,1fr) 36px;gap:8px;align-items:center;font-size:11px}.stack{display:flex;min-height:10px;background:var(--panel2);border-radius:5px;overflow:hidden}.stack span{display:block}.flowline button{padding:4px;text-align:left}.flowdetail{margin:10px 0;font-size:12px}.recs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.rec{text-align:left;padding:12px;display:grid;gap:5px}.rec b{font-size:16px}.rec .score{color:var(--accent);font-size:21px;font-weight:bold}.tablewrap{overflow-x:auto;max-width:100%}table{border-collapse:collapse;width:100%;font-size:12px}th,td{padding:8px;text-align:center;border-bottom:1px solid var(--line)}th:first-child,td:first-child{text-align:left;min-width:115px}td button{font-size:12px;padding:5px}.diagram{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:center;gap:7px}.diagram>div{background:var(--panel2);padding:12px;border-radius:9px;min-width:0}.diagram .arrow{color:var(--accent);font-size:20px}.primary{background:#7464de;color:white;border-color:#7464de;font-weight:700}label{display:block;margin:10px 0 4px}textarea{resize:vertical}#runCustom{margin-top:10px}.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center}.labcontrol{display:grid;grid-template-columns:1fr 1fr;gap:14px}.labcontrol input[type=range]{padding:0;accent-color:var(--accent)}.case{border-top:1px solid var(--line);padding:12px 0}.artcanvas{width:100%;height:auto;border-radius:10px;display:block}footer{font-size:10px;color:var(--muted);margin:25px 0;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.empty{padding:14px;color:var(--muted)}@media(max-width:900px){.shell{grid-template-columns:200px minmax(0,1fr)}main{padding:18px}.two{grid-template-columns:1fr}}@media(max-width:650px){header{height:58px;padding:0 12px}.status{display:none}.shell{display:block}aside{border-right:0;border-bottom:1px solid var(--line);padding:12px}aside .tiny{display:none}#poemList{display:flex;overflow-x:auto;gap:6px;padding-bottom:5px}.poemBtn{width:150px;flex:0 0 150px;background:var(--panel)}main{padding:12px}.intro,.card{padding:15px}.metrics{gap:6px}.metrics b{font-size:21px}.metrics span{font-size:10px}nav{margin:12px 0}nav button{font-size:12px;padding:7px 8px}.recs{grid-template-columns:1fr}.diagram{grid-template-columns:1fr}.diagram .arrow{transform:rotate(90deg);text-align:center}.labcontrol{grid-template-columns:1fr}.poemline{font-size:15px}.topright button{font-size:12px}}@media(prefers-reduced-motion:no-preference){.fill{transition:width .25s}button{transition:border-color .15s,background .15s}}
-</style><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23101521'/%3E%3Cpath d='M12 44L24 20 34 40 46 12 52 44' stroke='%23a78bfa' stroke-width='4' fill='none'/%3E%3C/svg%3E"></head><body>
-<header><a class="brand" href="#"><span class="logo">詩</span><span>시선 <small>POETRY SPECTRUM</small></span></a><div class="topright"><span class="status">● LOCAL ANALYSIS</span><button id="theme" aria-label="화면 테마 변경">☀ 테마</button></div></header>
-<div class="shell"><aside><div class="aside-title">COLLECTION <span>15</span></div><label class="sr" for="search">작품 검색</label><input id="search" placeholder="제목 또는 시인 검색"><label class="sr" for="filter">정서 필터</label><select id="filter"><option value="">모든 지배 정서</option></select><div id="poemList"></div><p class="tiny">한국 근대시 · 저작권 보호기간 종료 기준<br>감성컴퓨팅 개인 과제</p></aside>
-<main><section class="intro"><div class="eyebrow">LITERATURE × DATA SCIENCE</div><h1>시의 감정을, 데이터로.</h1><p>시어의 흔적에서 정서를 발견하고, 문학적 의미와 비교합니다.</p><div class="metrics"><div><b>15</b><span>수록 작품</span></div><div><b>08</b><span>정서 범주</span></div><div><b id="dictCount">—</b><span>감정 시어</span></div><div><b>06</b><span>기본 분석 기능</span></div></div></section>
-<nav id="nav" aria-label="분석 메뉴"><button data-tab="analysis" class="active">작품 분석</button><button data-tab="compare">감성 지도·비교</button><button data-tab="custom">내 시 분석</button><button data-tab="lab">분석 실험실</button><button data-tab="method">분석 방법</button></nav>
-<section class="panel" id="analysis"></section><section class="panel" id="compare" hidden></section><section class="panel" id="custom" hidden><article class="card"><div class="eyebrow">CUSTOM TEXT</div><h2>나만의 시 분석</h2><p>입력한 글은 외부로 전송되지 않습니다.</p><label for="customTitle">제목 (선택)</label><input id="customTitle" maxlength="100" placeholder="제목"><label for="customText">시 본문</label><textarea id="customText" maxlength="12000" rows="8" placeholder="한 행씩 입력해 보세요."></textarea><button class="primary" id="runCustom">감정 분석하기</button><div id="customMessage" role="status"></div></article><div id="customResult"></div></section><section class="panel" id="lab" hidden></section><section class="panel" id="method" hidden></section>
-<footer>詩線 · POETRY SPECTRUM <span>감정 비율은 시어 기반 점수이며 감정의 객관적 확률이 아닙니다.</span></footer></main></div>
-<script>const POEMS = [
-  {
-    "id": 1,
-    "title": "서시",
-    "author": "윤동주",
-    "death": 1945,
-    "year": 1948,
-    "created": 1941,
-    "source": "하늘과 바람과 별과 시 (1948 초판), 위키문헌",
-    "url": "https://ko.wikisource.org/wiki/하늘과_바람과_별과_시_(1948년)/서시",
-    "emotion": "성찰",
-    "theme": "부끄럼 없는 삶을 향한 다짐",
-    "speaker": "자신의 삶을 돌아보는 화자",
-    "tech": "상징, 독백, 의지적 어조",
-    "interpret": "화자는 작은 바람에도 자신의 삶을 돌아볼 만큼 엄격한 양심을 지닌다. 별은 그가 지향하는 가치의 표지로 읽힌다. 마지막의 바람은 다짐이 현실의 어려움 속에서도 이어진다는 인상을 준다.",
-    "text": "죽는 날까지 하늘을 우러러\n한 점 부끄럼이 없기를,\n잎새에 이는 바람에도\n나는 괴로워했다.\n별을 노래하는 마음으로\n모든 죽어 가는 것을 사랑해야지\n그리고 나한테 주어진 길을\n걸어가야겠다.\n\n오늘 밤에도 별이 바람에 스치운다.",
-    "new": false,
-    "key": "한 점 부끄럼이 없기를,",
-    "era": "일제강점기 창작 또는 발표; 유고 발표작 포함"
-  },
-  {
-    "id": 2,
-    "title": "별 헤는 밤",
-    "author": "윤동주",
-    "death": 1945,
-    "year": 1948,
-    "created": 1941,
-    "source": "하늘과 바람과 별과 시 (1948 초판), 위키문헌",
-    "url": "https://ko.wikisource.org/wiki/하늘과_바람과_별과_시_(1948년)/별_헤는_밤",
-    "emotion": "그리움",
-    "theme": "추억과 자기 성찰, 미래의 회복",
-    "speaker": "멀리 있는 사람들을 떠올리는 화자",
-    "tech": "반복, 열거, 상징",
-    "interpret": "별을 세는 행위는 잊고 있던 사람들의 이름을 되살리는 과정이다. 이름을 흙으로 덮는 행동은 자신을 돌아보는 부끄러움을 드러낸다. 마지막의 봄은 지금의 상실이 끝이 아닐 수 있다는 가능성을 연다.",
-    "text": "계절이 지나가는 하늘에는\n가을로 가득 차 있습니다.\n\n나는 아무 걱정도 없이\n가을 속의 별들을 다 헤일 듯합니다.\n\n가슴속에 하나 둘 새겨지는 별을\n이제 다 못 헤는 것은\n쉬이 아침이 오는 까닭이오,\n내일 밤이 남은 까닭이오,\n아직 나의 청춘이 다하지 않은 까닭입니다.\n\n별 하나에 추억과\n별 하나에 사랑과\n별 하나에 쓸쓸함과\n별 하나에 동경과\n별 하나에 시와\n별 하나에 어머니, 어머니,\n\n어머님, 나는 별 하나에 아름다운 말 한마디씩 불러 봅니다. 소학교 때 책상을 같이 했던 아이들의 이름과, 패, 경, 옥 이런 이국 소녀들의 이름과 벌써 애기 어머니 된 계집애들의 이름과, 가난한 이웃 사람들의 이름과, 비둘기, 강아지, 토끼, 노새, 노루, 프랑시스 잠, 라이너 마리아 릴케 이런 시인의 이름을 불러 봅니다.\n\n이네들은 너무나 멀리 있습니다.\n별이 아슬히 멀듯이,\n\n어머님,\n그리고 당신은 멀리 북간도에 계십니다.\n\n나는 무엇인지 그리워\n이 많은 별빛이 내린 언덕 위에\n내 이름자를 써 보고,\n흙으로 덮어 버리었습니다.\n\n딴은 밤을 새워 우는 벌레는\n부끄러운 이름을 슬퍼하는 까닭입니다.\n\n그러나 겨울이 지나고 나의 별에도 봄이 오면\n무덤 위에 파란 잔디가 피어나듯이\n내 이름자 묻힌 언덕 위에도\n자랑처럼 풀이 무성할 게외다.",
-    "new": true,
-    "key": "계절이 지나가는 하늘에는",
-    "era": "일제강점기 창작 또는 발표; 유고 발표작 포함"
-  },
-  {
-    "id": 3,
-    "title": "십자가",
-    "author": "윤동주",
-    "death": 1945,
-    "year": 1948,
-    "created": 1941,
-    "source": "하늘과 바람과 별과 시 (1948 초판), 위키문헌",
-    "url": "https://ko.wikisource.org/wiki/하늘과_바람과_별과_시_(1948년)/십자가",
-    "emotion": "성찰",
-    "theme": "고통을 감수하는 윤리적 결단",
-    "speaker": "십자가를 바라보는 화자",
-    "tech": "종교적 상징, 역설",
-    "interpret": "높은 첨탑은 화자가 쉽게 도달할 수 없는 이상을 나타낸다. 괴로움과 행복을 함께 놓은 표현은 희생의 역설을 드러낸다. 결말의 조용한 어조에는 신념을 실천하려는 의지가 담겨 있다.",
-    "text": "쫓아오던 햇빛인데\n지금 교회당 꼭대기\n십자가에 걸리었습니다.\n\n첨탑이 저렇게도 높은데\n어떻게 올라갈 수 있을까요.\n\n종소리도 들려오지 않는데\n휘파람이나 불며 서성거리다가,\n\n괴로웠던 사나이,\n행복한 예수 그리스도에게처럼\n십자가가 허락된다면\n\n목아지를 드리우고\n꽃처럼 피어나는 피를\n어두워 가는 하늘 밑에\n조용히 흘리겠습니다.",
-    "new": true,
-    "key": "쫓아오던 햇빛인데",
-    "era": "일제강점기 창작 또는 발표; 유고 발표작 포함"
-  },
-  {
-    "id": 4,
-    "title": "새로운 길",
-    "author": "윤동주",
-    "death": 1945,
-    "year": 1948,
-    "created": 1938,
-    "source": "하늘과 바람과 별과 시 (1948 초판), 위키문헌",
-    "url": "https://ko.wikisource.org/wiki/하늘과_바람과_별과_시_(1948년)/새로운_길",
-    "emotion": "희망",
-    "theme": "반복되는 일상에서 발견하는 새로움",
-    "speaker": "길을 걸어가는 화자",
-    "tech": "수미상관, 반복, 자연 이미지",
-    "interpret": "처음과 끝의 같은 길은 삶의 반복을 보여 준다. 그러나 매일 만나는 자연과 사람은 그 길을 새로운 경험으로 바꾼다. 화자는 미래를 거창하게 선언하기보다 일상을 새롭게 받아들인다.",
-    "text": "내를 건너서 숲으로\n고개를 넘어서 마을로\n\n어제도 가고 오늘도 갈\n나의 길 새로운 길\n\n민들레가 피고 까치가 날고\n아가씨가 지나고 바람이 일고\n\n나의 길은 언제나 새로운 길\n오늘도…… 내일도……\n\n내를 건너서 숲으로\n고개를 넘어서 마을로",
-    "new": true,
-    "key": "내를 건너서 숲으로",
-    "era": "일제강점기 창작 또는 발표; 유고 발표작 포함"
-  },
-  {
-    "id": 5,
-    "title": "빼앗긴 들에도 봄은 오는가",
-    "author": "이상화",
-    "death": 1943,
-    "year": 1926,
-    "created": null,
-    "source": "개벽 (1926), 위키문헌 현대 표기",
-    "url": "https://ko.wikisource.org/wiki/빼앗긴_들에도_봄은_오는가",
-    "emotion": "저항",
-    "theme": "빼앗긴 국토에 대한 애정과 저항",
-    "speaker": "식민지의 들판을 걷는 화자",
-    "tech": "의인화, 대조, 설의",
-    "interpret": "봄 풍경은 땅을 사랑하는 마음을 구체적인 감각으로 전달한다. 활기찬 자연과 빼앗긴 현실이 대비되어 단순한 봄의 기쁨으로 읽을 수 없다. 마지막 행은 자연의 소유마저 위협받는 현실에 대한 저항을 드러낸다.",
-    "text": "지금은 남의 땅―빼앗긴 들에도 봄은 오는가?\n\n나는 온몸에 햇살을 받고\n푸른 하늘 푸른 들이 맞붙은 곳으로\n가르마같은 논길을 따라 꿈속을 가듯 걸어만 간다.\n\n입술을 다문 하늘아 들아\n내 맘에는 내 혼자 온 것 같지를 않구나\n네가 끌었느냐 누가 부르더냐 답답해라 말을 해다오.\n\n바람은 내 귀에 속삭이며\n한 자국도 서지 마라 옷자락을 흔들고\n종다리는 울타리 너머 아가씨같이 구름 뒤에서 반갑다 웃네.\n\n고맙게 잘 자란 보리밭아\n간밤 자정이 넘어 내리는 고운 비로\n너는 삼단같은 머리를 감았구나 내 머리조차 가뿐하다.\n\n혼자라도 가쁘게나 가자\n마른 논을 안고 도는 착한 도랑이\n젖먹이 달래는 노래를 하고 제 혼자 어깨춤만 추고 가네.\n\n나비 제비야 깝치지 마라\n민들레 제비꽃에도 인사를 해야지\n아주까리 기름을 바른 이가 김을 매는 그 들이라 다 보고 싶다.\n\n내 손에 호미를 쥐여 다오\n살찐 젖가슴과 같은 부드러운 이 흙을\n발목이 시리도록 밟아도 보고 좋은 땀조차 흘리고 싶다.\n\n강가에 나온 아이와 같이\n짬도 모르고 끝도 없이 닫는 내 혼아\n무엇을 찾느냐 어디로 갔느냐 우습다 답을 하려무나.\n\n나는 온몸에 풋내를 띄고\n푸른 웃음 푸른 설음 어우러진 사이로\n다리를 절며 하루를 걷는다 아마도 봄 신령이 지폈나보다.\n\n그러나 지금은― 들을 빼앗겨 봄조차 빼앗기겠네",
-    "new": true,
-    "key": "지금은 남의 땅―빼앗긴 들에도 봄은 오는가?",
-    "era": "일제강점기 창작 또는 발표; 유고 발표작 포함"
-  },
-  {
-    "id": 6,
-    "title": "거울",
-    "author": "이상",
-    "death": 1937,
-    "year": 1933,
-    "created": null,
-    "source": "가톨릭청년 (1933); 북코스모스 한국 근현대시",
-    "url": "https://happynonghyup.bookcosmos.com/poem/1041",
-    "emotion": "성찰",
-    "theme": "분열된 자아와 소통 불가능성",
-    "speaker": "거울 속 자신을 관찰하는 화자",
-    "tech": "역설, 대칭, 반복",
-    "interpret": "거울은 자신을 볼 수 있게 하면서 동시에 접촉을 막는다. 악수의 실패는 가까운 자기 자신조차 이해하기 어려운 상황을 드러낸다. 담담한 관찰의 문체 뒤에는 고립과 불안이 흐른다.",
-    "text": "거울 속에는 소리가 없소\n저렇게까지 조용한 세상은 참 없을 것이오\n\n거울 속에도 내게 귀가 있소\n내 말을 못 알아듣는 딱한 귀가 두 개나 있소\n\n거울 속의 나는 왼손잡이요\n내 악수를 받을 줄 모르는―악수를 모르는 왼손잡이요\n\n거울 때문에 나는 거울 속의 나를 만져 보지를 못하는구료마는\n거울 아니었던들 내가 어찌 거울 속의 나를 만나 보기만이라도 했겠소\n\n나는 지금 거울을 안 가졌소마는 거울 속에는 늘 거울 속의 내가 있소\n잘은 모르지만 외로된 사업에 골몰할 게요\n\n거울 속의 나는 참 나와는 반대요마는\n또 꽤 닮았소\n나는 거울 속의 나를 근심하고 진찰할 수 없으니 퍽 섭섭하오",
-    "new": true,
-    "key": "거울 속에는 소리가 없소",
-    "era": "일제강점기 창작 또는 발표; 유고 발표작 포함"
-  },
-  {
-    "id": 7,
-    "title": "광야",
-    "author": "이육사",
-    "death": 1944,
-    "year": 1945,
-    "created": null,
-    "source": "자유신문 (1945); 위키문헌",
-    "url": "https://ko.wikisource.org/wiki/광야_(이육사)",
-    "emotion": "희망",
-    "theme": "역사적 시련을 넘어설 미래에 대한 믿음",
-    "speaker": "광야에서 미래를 내다보는 화자",
-    "tech": "시간의 확대, 상징, 명령형",
-    "interpret": "광야는 오랜 역사가 쌓인 공간으로 제시된다. 현재의 가난한 노래는 미래를 위한 작은 씨앗이다. 초인의 등장은 개인의 생애를 넘어서는 희망을 형상화한다.",
-    "text": "까마득한 날에\n하늘이 처음 열리고\n어데 닭 우는 소리 들렸으랴\n\n모든 산맥들이\n바다를 연모해 휘달릴 때도\n차마 이곳을 범하던 못하였으리라\n\n끊임없는 광음을\n부지런한 계절이 피어선 지고\n큰 강물이 비로소 길을 열었다\n\n지금 눈 내리고\n매화 향기 홀로 아득하니\n내 여기 가난한 노래의 씨를 뿌려라.\n\n다시 천고의 뒤에\n백마 타고 오는 초인이 있어\n이 광야에서 목놓아 부르게 하리라",
-    "new": false,
-    "key": "까마득한 날에",
-    "era": "일제강점기 창작 또는 발표; 유고 발표작 포함"
-  },
-  {
-    "id": 8,
-    "title": "청포도",
-    "author": "이육사",
-    "death": 1944,
-    "year": 1939,
-    "created": null,
-    "source": "문장 (1939); 위키문헌",
-    "url": "https://ko.wikisource.org/wiki/청포도",
-    "emotion": "희망",
-    "theme": "기다리는 손님과 평화로운 미래",
-    "speaker": "손님을 맞을 준비를 하는 화자",
-    "tech": "색채 대비, 감각적 이미지, 상징",
-    "interpret": "익어 가는 포도는 시간이 축적되어 결실을 맺는 이미지다. 손님을 기다리는 장면은 미래가 찾아오리라는 믿음으로 확장된다. 은쟁반과 수건은 그 미래를 맞이할 준비를 구체화한다.",
-    "text": "내 고장 칠월은\n청포도가 익어가는 시절\n\n이 마을 전설이 주절이주절이 열리고\n먼데 하늘이 꿈꾸며 알알이 들어와 박혀\n\n하늘 밑 푸른 바다가 가슴을 열고\n흰 돛단배가 곱게 밀려서 오면\n\n내가 바라는 손님은 고달픈 몸으로\n청포를 입고 찾아온다고 했으니\n\n내 그를 맞아 이 포도를 따먹으면\n두 손은 함뿍 적셔도 좋으련\n\n아이야 우리 식탁엔 은쟁반에\n하이얀 모시 수건을 마련해두렴",
-    "new": true,
-    "key": "내 고장 칠월은",
-    "era": "일제강점기 창작 또는 발표; 유고 발표작 포함"
-  },
-  {
-    "id": 9,
-    "title": "진달래꽃",
-    "author": "김소월",
-    "death": 1934,
-    "year": 1922,
-    "created": null,
-    "source": "개벽 (1922); 진달래꽃 (1925), 위키문헌 현대어",
-    "url": "https://ko.wikisource.org/wiki/진달래꽃_(시집)/진달래꽃",
-    "emotion": "슬픔",
-    "theme": "이별의 슬픔을 절제된 배려로 표현",
-    "speaker": "떠나는 상대를 보내는 화자",
-    "tech": "반어, 반복, 민요적 율격",
-    "interpret": "화자는 이별을 막기보다 상대가 떠나는 길을 준비한다. 꽃을 뿌리는 행동에는 애정과 슬픔이 함께 놓여 있다. 울지 않겠다는 선언은 오히려 깊은 슬픔을 느끼게 하는 반어로 읽을 수 있다.",
-    "text": "나 보기가 역겨워\n가실 때에는\n말없이 고이 보내드리오리다.\n\n영변에 약산\n진달래꽃\n아름따다 가실 길에 뿌리오리다.\n\n가시는 걸음 걸음\n놓인 그 꽃을\n사뿐히 즈려밟고 가시옵소서.\n\n나 보기가 역겨워\n가실 때에는\n죽어도 아니 눈물 흘리오리다.",
-    "new": false,
-    "key": "나 보기가 역겨워",
-    "era": "일제강점기 창작 또는 발표; 유고 발표작 포함"
-  },
-  {
-    "id": 10,
-    "title": "초혼",
-    "author": "김소월",
-    "death": 1934,
-    "year": 1925,
-    "created": null,
-    "source": "진달래꽃 (1925), 위키문헌",
-    "url": "https://ko.wikisource.org/wiki/진달래꽃_(시집)/초혼",
-    "emotion": "슬픔",
-    "theme": "죽은 대상에 대한 절절한 애도",
-    "speaker": "상실한 사람의 이름을 부르는 화자",
-    "tech": "반복, 영탄, 공간 대비",
-    "interpret": "부르는 이름에 대답이 없다는 사실이 상실의 현실을 드러낸다. 같은 구절이 반복될수록 미처 전하지 못한 마음이 크게 느껴진다. 돌이 되어서라도 부르겠다는 표현은 슬픔이 쉽게 끝나지 않음을 보여 준다.",
-    "text": "산산이 부서진 이름이어!\n허공중에 헤어진 이름이어!\n불러도 주인 없는 이름이어!\n부르다가 내가 죽을 이름이어!\n\n심중에 남아 있는 말 한마디는\n끝끝내 마저 하지 못하였구나.\n사랑하던 그 사람이어!\n사랑하던 그 사람이어!\n\n붉은 해는 서산 마루에 걸리었다.\n사슴이의 무리도 슬피 운다.\n떨어져 나가 앉은 산 위에서\n나는 그대의 이름을 부르노라.\n\n설움에 겹도록 부르노라.\n설움에 겹도록 부르노라.\n부르는 소리는 비껴가지만\n하늘과 땅 사이가 너무 넓구나.\n\n선 채로 이 자리에 돌이 되어도\n부르다가 내가 죽을 이름이어!\n사랑하던 그 사람이어!\n사랑하던 그 사람이어!",
-    "new": false,
-    "key": "산산이 부서진 이름이어!",
-    "era": "일제강점기 창작 또는 발표; 유고 발표작 포함"
-  },
-  {
-    "id": 11,
-    "title": "님의 침묵",
-    "author": "한용운",
-    "death": 1944,
-    "year": 1926,
-    "created": null,
-    "source": "님의 침묵 (1926); 수능국어 리딩맵 원문, 정책브리핑 대조",
-    "url": "https://readingmap.kr/literature/nim-ui-chimmuk/",
-    "emotion": "희망",
-    "theme": "이별을 넘어 사랑과 재회의 믿음",
-    "speaker": "님과 이별한 화자",
-    "tech": "역설, 산문적 리듬, 비유",
-    "interpret": "님의 부재는 화자에게 큰 충격을 준다. 하지만 화자는 슬픔을 사랑의 끝으로 받아들이지 않고 새로운 희망으로 바꾸려 한다. 떠난 님을 보내지 않았다는 역설은 마음속 관계가 계속됨을 뜻한다.",
-    "text": "님은 갔습니다. 아아, 사랑하는 나의 님은 갔습니다.\n푸른 산빛을 깨치고 단풍나무 숲을 향하여 난 작은 길을 걸어서, 차마 떨치고 갔습니다.\n황금의 꽃같이 굳고 빛나던 옛 맹세는 차디찬 티끌이 되어서 한숨의 미풍에 날아갔습니다.\n날카로운 첫 키스의 추억은 나의 운명의 지침을 돌려놓고, 뒤도 안 돌아보고 나아갔습니다.\n나는 향기로운 님의 말소리에 귀먹고, 꽃다운 님의 얼굴에 눈멀었습니다.\n사랑도 사람의 일이라, 만날 때에 미리 떠날 것을 염려하고 경계하지 아니한 것은 아니지만, 이별은 뜻밖의 일이 되고 놀란 가슴은 새로운 슬픔에 터집니다.\n그러나 이별을 쓸데없는 눈물의 원천으로 만들고 마는 것은 스스로 사랑을 깨치는 것인 줄 아는 까닭에, 걷잡을 수 없는 슬픔의 힘을 옮겨서 새 희망의 정수박이에 들어부었습니다.\n우리는 만날 때에 떠날 것을 염려하는 것과 같이, 떠날 때에 다시 만날 것을 믿습니다.\n아아, 님은 갔지마는 나는 님을 보내지 아니하였습니다.\n제 곡조를 못 이기는 사랑의 노래는 님의 침묵을 휩싸고 돕니다.",
-    "new": false,
-    "key": "님은 갔습니다. 아아, 사랑하는 나의 님은 갔습니다.",
-    "era": "일제강점기 창작 또는 발표; 유고 발표작 포함"
-  },
-  {
-    "id": 12,
-    "title": "그날이 오면",
-    "author": "심훈",
-    "death": 1936,
-    "year": 1949,
-    "created": 1930,
-    "source": "그날이 오면 (1949 유고 시집), 위키문헌",
-    "url": "https://ko.wikisource.org/wiki/그날이_오면/그날이_오면",
-    "emotion": "저항",
-    "theme": "민족 해방에 대한 열망과 환희",
-    "speaker": "해방의 날을 상상하는 화자",
-    "tech": "과장, 반복, 역설",
-    "interpret": "해방의 순간을 자연까지 움직이는 거대한 사건으로 상상한다. 몸의 고통을 감수하겠다는 과장에는 개인보다 공동체의 해방을 앞세우는 마음이 나타난다. 격렬한 어휘를 슬픔만으로 분류하면 이 작품의 환희와 저항을 놓치게 된다.",
-    "text": "그날이 오면 그날이 오면은\n삼각산이 일어나 더덩실 춤이라도 추고\n한강물이 뒤집혀 용솟음칠 그날이,\n이 목숨이 끊지기 전에 와 주기만 하량이면,\n나는 밤하늘에 날으는 까마귀와 같이\n종로의 인경을 머리로 드리받아 울리오리다,\n두개골은 깨어져 산산 조각이 나도\n기뻐서 죽사오매 오히려 무슨 한이 남으오리까.\n\n그날이 와서 오오 그날이 와서\n육조 앞 넓은 길을 울며 뛰며 뒹굴어도\n그래도 넘치는 기쁨에 가슴이 미어질 듯 하거든\n드는 칼로 이 몸의 가죽이라도 벗겨서\n커다란 북을 만들어 둘러메고는\n여러분의 행렬에 앞장을 서오리다,\n우렁찬 그 소리를 한 번이라도 듣기만 하면\n그 자리에 거꾸러져도 눈을 감겠소이다",
-    "new": true,
-    "key": "그날이 오면 그날이 오면은",
-    "era": "일제강점기 창작 또는 발표; 유고 발표작 포함"
-  },
-  {
-    "id": 13,
-    "title": "떠나가는 배",
-    "author": "박용철",
-    "death": 1938,
-    "year": 1930,
-    "created": null,
-    "source": "시문학 (1930); 박용철 시집, 위키문헌",
-    "url": "https://ko.wikisource.org/wiki/떠나가는_배",
-    "emotion": "슬픔",
-    "theme": "떠남의 아픔과 결단",
-    "speaker": "정든 곳을 떠나는 화자",
-    "tech": "설의, 반복, 항구의 상징",
-    "interpret": "항구는 익숙한 삶과 사람들의 기억을 품은 공간이다. 떠나겠다는 반복은 확신이라기보다 두려움을 견디려는 자기 설득으로 읽힌다. 새로운 곳이 보장되지 않아 이별의 슬픔과 결단이 공존한다.",
-    "text": "나 두 야 간다\n나의 이 젊은 나이를\n눈물로야 보낼 거냐\n나 두 야 가련다\n\n안윽한 이 항구인들 손쉽게야 버릴 거냐\n안개같이 물 어린 눈에도 비치나니\n골짜기마다 발에 익은 멧부리 모양\n주름살도 눈에 익은 아― 사랑하던 사람들\n\n버리고 가는 이도 못 잊는 마음\n쫓겨가는 마음인들 무어 다를 거냐\n돌아다보는 구름에는 바람이 희살짓는다\n앞대일 언덕인들 마련이나 있을 거냐\n\n나 두 야 가련다\n나의 이 젊은 나이를\n눈물로야 보낼 거냐\n나 두 야 간다",
-    "new": true,
-    "key": "나 두 야 간다",
-    "era": "일제강점기 창작 또는 발표; 유고 발표작 포함"
-  },
-  {
-    "id": 14,
-    "title": "봄은 고양이로다",
-    "author": "이장희",
-    "death": 1929,
-    "year": 1924,
-    "created": null,
-    "source": "금성 (1924); 위키문헌",
-    "url": "https://ko.wikisource.org/wiki/봄은_고양이로다",
-    "emotion": "기쁨",
-    "theme": "봄의 생동감과 감각적 발견",
-    "speaker": "고양이를 바라보는 화자",
-    "tech": "직유, 감각적 이미지, 병렬",
-    "interpret": "고양이의 털과 눈, 입술과 수염을 통해 봄의 여러 감각을 포착한다. 포근함과 날카로운 생기가 공존해 봄을 한 가지 정서로 고정하지 않는다. 사물의 관찰에서 계절의 생명력을 발견하는 시선이 돋보인다.",
-    "text": "꽃가루와 같이 부드러운 고양이의 털에\n고운 봄의 향기가 어리우도다\n\n금방울과 같이 호동그란 고양이의 눈에\n미친 봄의 불길이 흐르도다\n\n고요히 다물은 고양이의 입술에\n포근한 봄의 졸음이 떠돌아라\n\n날카롭게 쭉 뻗은 고양이의 수염에\n푸른 봄의 생기가 뛰놀아라",
-    "new": true,
-    "key": "꽃가루와 같이 부드러운 고양이의 털에",
-    "era": "일제강점기 창작 또는 발표; 유고 발표작 포함"
-  },
-  {
-    "id": 15,
-    "title": "남으로 창을 내겠소",
-    "author": "김상용",
-    "death": 1951,
-    "year": 1934,
-    "created": null,
-    "source": "문학 (1934); 망향 (1938), 위키문헌",
-    "url": "https://ko.wikisource.org/wiki/남으로_창을_내겠소",
-    "emotion": "평온",
-    "theme": "소박한 전원생활과 달관",
-    "speaker": "농촌의 삶을 꿈꾸는 화자",
-    "tech": "설의, 상징, 간결한 어조",
-    "interpret": "남향 창과 작은 밭은 화자가 바라는 소박한 생활을 구체화한다. 새의 노래와 수확을 나누는 모습에서 물질적 욕심을 줄인 태도가 나타난다. 마지막의 웃음은 삶을 설명하기보다 받아들이는 여유로 읽힌다.",
-    "text": "남으로\n창을 내겠소.\n밭이 한참갈이\n괭이로 파고\n호미론 김을 매지요.\n\n구름이 꼬인다\n갈 리 있소.\n새 노래는 공으로 들으랴오.\n강냉이가 익걸랑\n함께 와 자셔도 좋소\n\n왜 사냐건\n웃지요.",
-    "new": true,
-    "key": "남으로",
-    "era": "1930년대 전원 서정시"
-  }
-];
-if(typeof module!=="undefined") module.exports=POEMS;
-</script><script>// 감정 사전: 표제어와 일부 활용형을 포함한 독립 설계. 부분 문자열 규칙의 한계는 README 참고.
-const EMOS = [
- ['기쁨','#fbbf24','행복과 즐거움, 생동감에서 비롯되는 정서','기쁨 기뻐 기쁘 행복 즐겁 즐거 웃음 웃네 웃지 반갑 환희 신명 더덩실 춤 생기 뛰놀 아름다운 고맙 가뿐 설렘 유쾌 만족 환하게'],
- ['슬픔','#60a5fa','이별이나 상실, 고통에서 비롯되는 정서','슬픔 슬퍼 슬피 설움 설음 눈물 괴로 죽는 죽어 죽을 죽사 상실 이별 헤어진 한숨 아픔 쓸쓸 울며 우는 섭섭 고달픈 비애 무덤 부서진'],
- ['희망','#34d399','미래에 대한 기대와 나아가려는 의지','희망 내일 새로운 길 꿈꾸 바라는 기다리 믿습니다 믿음 다시 만날 걸어가야 피어나 씨를 뿌려 초인 백마 다짐 용기 소망 결실 익어가는 그날이 오면 그날이 와서 청춘 허락'],
- ['사랑','#f472b6','대상을 아끼고 헌신하려는 마음','사랑 연모 애정 헌신 자애 고이 보내드리 진달래꽃 어머니 어머님 포옹 키스 맹세 그대 다정 아끼 보살피 정성 손님 따뜻 자상 함께 와 마음을 주'],
- ['성찰','#a78bfa','자신의 내면과 삶의 의미를 돌아보는 정서','부끄럼 부끄러 성찰 반성 양심 거울 자아 근심 진찰 외로된 닮았 반대 내 이름자 내 혼 생각 고민 깨닫 돌아보 질문 존재 운명 왜 사냐 삶의 의미'],
- ['저항','#fb7185','억압과 부조리에 맞서려는 정서','빼앗긴 빼앗겨 빼앗기 남의 땅 억압 저항 해방 독립 자유 굴복 맞서 항거 투쟁 분노 역겨워 즈려밟 울분 앞장을 용솟음 드리받 부조리 치욕 결단'],
- ['그리움','#fb923c','부재하는 대상이나 과거를 다시 만나려는 갈망','그리워 그리움 추억 동경 못 잊 보고 싶 불러도 이름이어 이름을 부르 먼데 멀리 고향 옛날 향수 기다림 아득 옛 맹세 돌아다보 정든 기억 이국 재회'],
- ['평온','#2dd4bf','안정과 자연, 여유에서 느끼는 편안함','평온 고요 조용 평화 여유 포근 부드러운 안윽 안온 편안 햇살 햇빛 향기 푸른 하늘 푸른 바다 숲으로 강가 잔디 새 노래 졸음 고운 비 맑은 따사로운']
-].map(([name,color,definition,words])=>({name,color,definition,words:words.split(' ')}));
-// 여러 단어로 이루어진 구절은 별도로 등록한다 (공백 구분 사전의 오탐 방지).
-const phrases = {희망:['새로운 길','다시 만날','씨를 뿌려','그날이 오면','그날이 와서'],사랑:['함께 와','마음을 주'],성찰:['내 이름자','내 혼','왜 사냐','삶의 의미'],저항:['남의 땅'],그리움:['못 잊','보고 싶','이름을 부르','옛 맹세'],평온:['푸른 하늘','푸른 바다','새 노래','고운 비']};
-const remove = {희망:['새로운','길','다시','만날','씨를','뿌려','그날이','오면','와서'],사랑:['함께','와','마음을','주'],성찰:['내','이름자','혼','왜','사냐','삶의','의미'],저항:['남의','땅'],그리움:['못','잊','보고','싶','이름을','부르','옛','맹세'],평온:['푸른','하늘','바다','새','노래','비','고운']};
-EMOS.forEach(e=>e.words=[...new Set([...e.words.filter(w=>!(remove[e.name]||[]).includes(w)),...(phrases[e.name]||[])])]);
-// 각 사전은 최소 20개 고유 항목으로 유지.
-const extra={희망:['새벽','희구','피어나듯','새날','기대','전진','일어나','새로움'],사랑:['사모','친애','애틋','품어','보듬'],성찰:['자책','후회','고뇌','물음','수치','번민'],저항:['불복','빼앗','속박','압제'],그리움:['그립','아련','회상','그리운','낯익은'],평온:['안락','휴식','산들바람','한적','평안','햇볕','잔잔','평화로운']};
-EMOS.forEach(e=>e.words=[...new Set([...e.words,...(extra[e.name]||[])])]);
-const terms=EMOS.flatMap((e,i)=>e.words.map(word=>({word,i}))).sort((a,b)=>b.word.length-a.word.length);
-const contextRules=[['아니 눈물','슬픔',2.1],['아무 걱정도 없이','평온',1.5],['조용한 세상은 참 없을','성찰',1.8],['부끄럼이 없기를','성찰',2.2],['기뻐서 죽사','기쁨',2.2],['새 희망','희망',2],['빼앗겨 봄조차','저항',2.2],['십자가가 허락','성찰',2],['못 알아듣는','성찰',1.5]].map(([word,name,weight])=>({word,i:EMOS.findIndex(e=>e.name===name),weight,rule:true}));
-function percent(scores){const sum=scores.reduce((a,b)=>a+b,0);if(!sum)return scores.map(()=>0);const exact=scores.map(s=>s*100/sum),out=exact.map(Math.floor);let left=100-out.reduce((a,b)=>a+b,0);exact.map((n,i)=>({i,r:n-out[i]})).sort((a,b)=>b.r-a.r||a.i-b.i).slice(0,left).forEach(x=>out[x.i]++);return out;}
-function analyze(text,mode='context',strength=1){let total=Array(8).fill(0),seen=new Map();const dictionary=(mode==='context'?[...contextRules,...terms]:terms).sort((a,b)=>b.word.length-a.word.length || Number(!!b.rule)-Number(!!a.rule));let lines=String(text).normalize('NFC').replace(/\r\n?/g,'\n').split('\n').map(line=>{let hits=[],scores=Array(8).fill(0);for(let pos=0;pos<line.length;){let t=dictionary.find(t=>line.startsWith(t.word,pos));if(!t){pos++;continue;}let count=seen.get(t.word)||0;seen.set(t.word,count+1);let w=1;if(mode!=='frequency'){w=1+strength*(Math.min(t.word.length,6)-2)*.12;w*=1+strength*Math.min(count,2)*.15;}if(t.rule)w*=1+strength*(t.weight-1);if(mode==='context'&&!t.rule&&/^(?:지 않|지 못|도 없|이 없)/.test(line.slice(pos+t.word.length)))w*=1-strength*.5;w=Math.max(.1,w);scores[t.i]+=w;total[t.i]+=w;hits.push({...t,start:pos,end:pos+t.word.length,score:w});pos+=t.word.length;}return {line,hits,scores};});let vector=percent(total),n=lines.reduce((a,l)=>a+l.hits.length,0);return {lines,total,vector,n,dominant:n?EMOS[total.indexOf(Math.max(...total))].name:null};}
-function cosine(a,b){let d=a.reduce((s,x,i)=>s+x*b[i],0),n=Math.hypot(...a)*Math.hypot(...b);return n?d/n:0;}
-// 공분산 행렬의 직교 고유벡터를 Jacobi 회전으로 구하는 실제 PCA.
-function pca(vectors){const m=vectors.length,d=8,mean=Array.from({length:d},(_,i)=>vectors.reduce((s,v)=>s+v[i],0)/m),X=vectors.map(v=>v.map((x,i)=>x-mean[i]));let A=Array.from({length:d},(_,i)=>Array.from({length:d},(_,j)=>X.reduce((s,v)=>s+v[i]*v[j],0)/Math.max(1,m-1))),V=Array.from({length:d},(_,i)=>Array.from({length:d},(_,j)=>+(i===j)));for(let k=0;k<300;k++){let p=0,q=1;for(let i=0;i<d;i++)for(let j=i+1;j<d;j++)if(Math.abs(A[i][j])>Math.abs(A[p][q])){p=i;q=j;}if(Math.abs(A[p][q])<1e-8)break;let theta=.5*Math.atan2(2*A[p][q],A[q][q]-A[p][p]),c=Math.cos(theta),s=Math.sin(theta);let J=Array.from({length:d},(_,i)=>Array.from({length:d},(_,j)=>i===j?(i===p||i===q?c:1):i===p&&j===q?s:i===q&&j===p?-s:0));const mul=(a,b)=>a.map(r=>b[0].map((_,j)=>r.reduce((z,x,i)=>z+x*b[i][j],0)));A=mul(mul(J[0].map((_,i)=>J.map(r=>r[i])),A),J);V=mul(V,J);}let order=A.map((r,i)=>({i,val:Math.max(0,r[i])})).sort((a,b)=>b.val-a.val),axes=order.slice(0,2).map(o=>V.map(r=>r[o.i])),sum=order.reduce((s,o)=>s+o.val,0);return {points:X.map(v=>axes.map(a=>v.reduce((s,x,i)=>s+x*a[i],0))),axes,variance:order.slice(0,2).map(o=>sum?o.val/sum:0)};}
-if(typeof module!=='undefined')module.exports={EMOS,analyze,percent,cosine,pca};
-</script><script>'use strict';
-const $=id=>document.getElementById(id), esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const color=n=>EMOS.find(e=>e.name===n)?.color||'#94a3b8';
-const dot=c=>`<span class="dot" style="background:${c}"></span>`;
-let current=POEMS[0], mode='context', strength=1, tab='analysis', custom=null;
-const all=()=>POEMS.map(p=>({p,a:analyze(p.text,mode,strength)}));
-const activeAnalysis=p=>analyze(p.text,mode,strength);
-const legend=()=>`<div class="legend">${EMOS.map(e=>`<span>${dot(e.color)}${e.name}</span>`).join('')}</div>`;
-function ranking(p,a){if(!a.n)return [];return all().filter(x=>x.p.id!==p.id&&x.a.n).map(x=>({...x,sim:cosine(a.total,x.a.total)})).sort((a,b)=>b.sim-a.sim).slice(0,3);}
-function bars(a){return a.n?EMOS.map((e,i)=>`<div class="barrow"><span>${e.name}</span><div class="track"><div class="fill" style="width:${a.vector[i]}%;background:${e.color}"></div></div><b>${a.vector[i]}%</b></div>`).join(''):'<p class="empty">분석 근거 부족: 감정 시어가 발견되지 않았습니다. 비율을 임의로 생성하지 않습니다.</p>';}
-function donut(a){let acc=0;const seg=a.vector.map((v,i)=>{const s=acc;acc+=v;return `<circle cx="80" cy="80" r="55" fill="none" stroke="${EMOS[i].color}" stroke-width="15" pathLength="100" stroke-dasharray="${v} ${100-v}" stroke-dashoffset="${-s}" transform="rotate(-90 80 80)"><title>${EMOS[i].name} ${v}%</title></circle>`}).join('');return `<svg class="chart" style="max-width:190px;margin:auto" viewBox="0 0 160 160" role="img" aria-label="감정 비율 도넛 차트"><circle cx="80" cy="80" r="55" fill="none" stroke="var(--line)" stroke-width="15"/>${a.n?seg:''}<text x="80" y="76" text-anchor="middle" style="font-size:19px;fill:var(--fg);font-weight:bold">${a.n?Math.max(...a.vector)+'%':'—'}</text><text x="80" y="94" text-anchor="middle">${a.dominant||'미검출'}</text></svg>`;}
-function radar(a,b){const cx=150,cy=118,r=85,point=(i,v)=>[cx+Math.sin(i*Math.PI/4)*r*v/100,cy-Math.cos(i*Math.PI/4)*r*v/100],poly=v=>v.map((n,i)=>point(i,n).join(',')).join(' ');return `<svg viewBox="0 0 300 248" class="chart" role="img" aria-label="8개 감정 레이더 차트">${[25,50,75,100].map(x=>`<polygon points="${poly(Array(8).fill(x))}" fill="none" stroke="var(--line)"/>`).join('')}${EMOS.map((e,i)=>{let [x,y]=point(i,122),[a,b]=point(i,100);return `<line x1="${cx}" y1="${cy}" x2="${a}" y2="${b}" stroke="var(--line)"/><text x="${x}" y="${y+3}" text-anchor="middle">${e.name}</text>`}).join('')}${b?.n?`<polygon points="${poly(b.vector)}" fill="none" stroke="#2dd4bf" stroke-width="2" stroke-dasharray="5 4"/>`:''}${a.n?`<polygon points="${poly(a.vector)}" fill="#a78bfa35" stroke="#a78bfa" stroke-width="2.4"/>`:''}</svg>`;}
-function poemBody(a){let num=0;return a.lines.map((l,i)=>{if(!l.line.trim())return '<div class="stanza"></div>';num++;let pos=0,html='';l.hits.forEach((h,j)=>{html+=esc(l.line.slice(pos,h.start))+`<button class="hit" style="--c:${EMOS[h.i].color}" data-hit="${i},${j}" title="${EMOS[h.i].name}">${esc(l.line.slice(h.start,h.end))}</button>`;pos=h.end});return `<div class="poemline"><span class="num">${String(num).padStart(2,'0')}</span><span>${html+esc(l.line.slice(pos))}</span></div>`}).join('');}
-function flow(a){const lines=a.lines.filter(l=>l.line.trim()),max=Math.max(1,...lines.map(l=>l.scores.reduce((s,x)=>s+x,0)));return `<div class="flow">${lines.map((l,i)=>`<div class="flowline"><span>${i+1}행</span><button class="stack" data-line="${i}" title="${esc(l.line)} · ${esc(l.hits.map(h=>h.word).join(', ')||'미검출')}">${l.scores.map((s,j)=>`<span style="width:${100*s/max}%;background:${EMOS[j].color};height:9px"></span>`).join('')}</button><span>${l.hits.length}개</span></div>`).join('')}</div><div class="evidence flowdetail" aria-live="polite">막대를 선택하면 원문과 검출 시어가 표시됩니다.</div>`;}
-function diagram(p,a){let groups=new Map();a.lines.flatMap(l=>l.hits).forEach(h=>{let k=h.word+'|'+h.i;groups.set(k,(groups.get(k)||0)+h.score)});let top=[...groups].sort((a,b)=>b[1]-a[1]).slice(0,6);return a.n?`<div class="diagram"><div><h3>01 · 핵심 시어</h3>${top.map(([k,v])=>{let [w,i]=k.split('|');return `<p>${dot(EMOS[i].color)} ${esc(w)} · ${v.toFixed(1)}점</p>`}).join('')}</div><span class="arrow">→</span><div><h3>02 · 감정 분류</h3>${EMOS.map((e,i)=>a.vector[i]?`<p>${dot(e.color)} ${e.name} ${a.vector[i]}%</p>`:'').join('')}</div><span class="arrow">→</span><div><h3>03 · 문학적 주제</h3><p>${esc(p.theme||'사용자 입력: 주제는 자동으로 추정하지 않음')}</p></div></div><p class="tiny">시어 → 감정은 계산 결과, 감정 → 주제는 문학적 해석입니다.</p>`:'<p>검출 시어가 없습니다.</p>';}
-function result(p,root){const a=activeAnalysis(p),recs=ranking(p,a);root.innerHTML=`<div class="two"><article class="card"><div class="eyebrow">01 / ORIGINAL TEXT</div><h2 class="poem-title">${esc(p.title)}</h2><p>${esc(p.author||'사용자 입력')} ${p.year?'· 발표 '+p.year+'년':''} ${p.created?'· 창작 '+p.created+'년':''} ${p.new?'· 신규 작품':''}</p>${poemBody(a)}<div class="evidence" aria-live="polite">밑줄 친 시어를 선택해 분석 근거를 확인하세요.</div>${p.url?`<div class="source">출처: <a href="${esc(p.url)}" target="_blank" rel="noopener noreferrer">${esc(p.source)}</a><br>시인 사망 ${p.death}년 · 현대 표기 전사 (판본 대조 권장)</div>`:''}</article><article class="card"><div class="eyebrow">02 / EMOTION PROFILE</div><h2>정량 분석 결과</h2><div class="big" style="color:${color(a.dominant)}">${a.dominant||'미검출'}</div><p>검출 시어 ${a.n}개 · ${modeLabel(mode)} · 상대 점수</p>${donut(a)}${bars(a)}${p.interpret?`<div class="reading"><div class="eyebrow">03 / LITERARY READING</div><h2>문학적 해석</h2><span class="pill" style="border-color:${color(p.emotion)}">해석상 지배 정서: ${p.emotion}</span><dl><dt>주제</dt><dd>${esc(p.theme)}</dd><dt>화자</dt><dd>${esc(p.speaker)}</dd><dt>기법</dt><dd>${esc(p.tech)}</dd><dt>배경</dt><dd>${esc(p.era)}</dd><dt>핵심 구절</dt><dd>${esc(p.key)}</dd></dl><p>${esc(p.interpret)}</p><p class="tiny">AI 작성 보조 해석 초안 · 정량 결과와 독립적인 읽기</p></div>`:''}</article></div><div class="two"><article class="card"><h3>감정 프로필 · 레이더</h3>${radar(a,recs[0]?.a)}<p class="tiny">보라색 실선: 현재 작품 / 청록색 점선: ${esc(recs[0]?.p.title||'추천 없음')}</p>${legend()}</article><article class="card"><h3>행별 감정 흐름</h3>${flow(a)}${legend()}</article></div><article class="card"><h3>시어 → 감정 → 주제</h3>${diagram(p,a)}</article><article class="card"><h3>비슷한 감성의 시</h3><div class="recs">${recs.map(x=>`<button class="rec" data-poem="${x.p.id}"><span class="score">${Math.round(x.sim*100)}%</span><b>${esc(x.p.title)}</b><small class="muted">${x.p.author} · ${x.a.dominant}</small><small>공통 정서: ${EMOS.filter((e,i)=>a.vector[i]>0&&x.a.vector[i]>0).map(e=>e.name).join(', ')||'없음'}</small></button>`).join('')||'<p>비교할 감정 근거가 없습니다.</p>'}</div></article><article class="card"><h3>감정 아트 · Emotion field</h3><p>정서 비율에 비례한 색과 원의 밀도로 표현한 추상 이미지입니다.</p><canvas class="artcanvas" width="800" height="300" aria-label="감정 비율 기반 추상 아트"></canvas><div class="row" style="margin-top:12px"><button data-export="png">PNG 저장</button><button data-export="json">JSON 내보내기</button><button data-export="csv">CSV 내보내기</button></div></article>`;root.querySelectorAll('[data-hit]').forEach(b=>b.onclick=()=>{let [i,j]=b.dataset.hit.split(',').map(Number),h=a.lines[i].hits[j];root.querySelector('.evidence').textContent=`${h.word} → ${EMOS[h.i].name} · ${h.score.toFixed(2)}점 · ${h.rule?'문맥 규칙':'감정 사전 일치'}`});root.querySelectorAll('[data-line]').forEach(b=>b.onclick=()=>{let l=a.lines.filter(x=>x.line.trim())[+b.dataset.line];root.querySelector('.flowdetail').textContent=l.line+' / '+(l.hits.map(h=>`${h.word} (${EMOS[h.i].name}, ${h.score.toFixed(2)}점)`).join(' · ')||'검출 시어 없음')});root.querySelectorAll('[data-poem]').forEach(b=>b.onclick=()=>choose(+b.dataset.poem));drawArt(root.querySelector('canvas'),a);root.querySelectorAll('[data-export]').forEach(b=>b.onclick=()=>exportResult(b.dataset.export,p,a,root));}
-function modeLabel(m){return {frequency:'단순 빈도',weighted:'가중치 분석',context:'문맥 규칙 분석'}[m]}
-function drawArt(canvas,a){const c=canvas.getContext('2d');c.fillStyle='#101521';c.fillRect(0,0,800,300);let seed=42;const rand=()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296};a.vector.forEach((v,i)=>{for(let j=0;j<v*2;j++){let x=rand()*800,y=rand()*300,r=3+rand()*28;c.globalAlpha=.12+rand()*.45;c.fillStyle=EMOS[i].color;c.beginPath();c.arc(x,y,r,0,Math.PI*2);c.fill()}});c.globalAlpha=1;if(!a.n){c.fillStyle='#a4b0c4';c.font='22px sans-serif';c.fillText('No emotion evidence',30,50);}}
-function download(content,name,type){const blob=new Blob([content],{type});const u=URL.createObjectURL(blob);const a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}
-function exportResult(type,p,a,root){if(type==='png'){root.querySelector('canvas').toBlob(blob=>{if(blob)download(blob,'emotion-art.png','image/png')});return;}if(type==='json')download(JSON.stringify({title:p.title,mode,strength,emotions:EMOS.map((e,i)=>({name:e.name,percent:a.n?a.vector[i]:null,score:a.total[i]})),lines:a.lines},null,2),'emotion-analysis.json','application/json');else download('\uFEFF감정,점수,비율\n'+EMOS.map((e,i)=>`${e.name},${a.total[i].toFixed(3)},${a.n?a.vector[i]:''}`).join('\n'),'emotion-analysis.csv','text/csv;charset=utf-8');}
-function list(){let q=$('search').value.toLowerCase(),f=$('filter').value;let data=all().filter(({p,a})=>(p.title+' '+p.author).toLowerCase().includes(q)&&(!f||a.dominant===f));$('poemList').innerHTML=data.map(({p,a})=>`<button class="poemBtn ${p.id===current.id?'on':''}" data-id="${p.id}">${dot(color(a.dominant))}<span><b>${esc(p.title)}</b><small>${p.author} · ${p.year}</small></span></button>`).join('')||'<p>검색 결과 없음</p>';$('poemList').querySelectorAll('button').forEach(b=>b.onclick=()=>choose(+b.dataset.id));}
-function choose(id){current=POEMS.find(p=>p.id===id)||current;list();setTab('analysis');}
-function compare(){let data=all(), pc=pca(data.map(x=>x.a.vector)),xs=pc.points.map(x=>x[0]),ys=pc.points.map(x=>x[1]),scale=(n,a,b,lo,hi)=>a===b?(lo+hi)/2:lo+(n-a)/(b-a)*(hi-lo);let points=pc.points.map(([x,y],i)=>{let X=scale(x,Math.min(...xs),Math.max(...xs),38,520),Y=scale(y,Math.min(...ys),Math.max(...ys),245,24);return `<g tabindex="0" role="button" aria-label="${esc(data[i].p.title)}" data-poem="${data[i].p.id}" style="cursor:pointer"><circle cx="${X}" cy="${Y}" r="10" fill="${color(data[i].a.dominant)}" stroke="var(--bg)" stroke-width="2"/><text x="${X}" y="${Y+3}" text-anchor="middle" style="fill:#101521;font-weight:bold;font-size:9px">${i+1}</text><title>${esc(data[i].p.title)}</title></g>`}).join('');$('compare').innerHTML=`<article class="card"><div class="eyebrow">PCA / 2D PROJECTION</div><h2>감성 지도</h2><p>8차원 감정 비율의 공분산을 계산하여 주성분으로 투영했습니다. 가까운 점일수록 두 주성분에서 유사합니다.</p><svg viewBox="0 0 560 280" class="chart" role="img" aria-label="작품 감성 지도"><rect x="25" y="10" width="510" height="250" rx="8" fill="var(--panel2)"/>${[60,110,160,210].map(y=>`<line x1="25" y1="${y}" x2="535" y2="${y}" stroke="var(--line)"/>`).join('')}${points}<text x="280" y="276" text-anchor="middle">PC1 ${(pc.variance[0]*100).toFixed(1)}%</text><text x="29" y="12">PC2 ${(pc.variance[1]*100).toFixed(1)}%</text></svg><div class="row">${data.map((x,i)=>`<button data-poem="${x.p.id}">${i+1}. ${esc(x.p.title)}</button>`).join('')}</div><p>적재값: ${pc.axes.map((a,i)=>`PC${i+1} (${a.map((v,j)=>EMOS[j].name+' '+v.toFixed(2)).join(' / ')})`).join(' · ')}</p></article><article class="card"><h2>전체 감정 히트맵</h2><p>작품 15편 × 감정 8개 · 백분율</p><div class="tablewrap"><table><thead><tr><th>작품</th>${EMOS.map(e=>`<th>${e.name}</th>`).join('')}</tr></thead><tbody>${data.map(({p,a})=>`<tr><td><button data-poem="${p.id}">${esc(p.title)}</button></td>${a.vector.map((v,i)=>`<td style="background:color-mix(in srgb,${EMOS[i].color} ${v}%,transparent)">${a.n?v+'%':'—'}</td>`).join('')}</tr>`).join('')}</tbody></table></div></article>`;$('compare').querySelectorAll('[data-poem]').forEach(b=>{b.onclick=()=>choose(+b.dataset.poem);b.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();choose(+b.dataset.poem)}}});}
-const cases=[{id:1,why:'죽음·괴로움이 상실 정서로 잡히지만 부끄러움 없는 삶을 다짐하는 맥락이다.',fix:'부끄럼이 없기를 구절을 성찰 규칙으로 분류한다.'},{id:3,why:'허락과 행복은 표면적으로 긍정적이지만 십자가의 상징은 자기 성찰과 희생을 의미한다.',fix:'십자가가 허락 구절을 성찰로 분류한다.'},{id:5,why:'봄과 자연의 기쁨이 식민지 현실에 대한 저항의 의미를 가린다.',fix:'빼앗겨 봄조차라는 대조 구절에 저항 가중치를 적용한다.'},{id:9,why:'꽃과 배려는 사랑으로 잡히지만 울지 않겠다는 반어에 슬픔이 담겨 있다.',fix:'아니 눈물을 슬픔 규칙으로 처리한다.'},{id:11,why:'이별과 슬픔이 반복되지만 결말은 재회에 대한 믿음을 드러낸다.',fix:'새 희망에 가중치를 주되 여전히 슬픔이 우세할 수 있음을 기록한다.'}];
-function lab(){let baseline=analyze(current.text,'frequency'),a=activeAnalysis(current);$('lab').innerHTML=`<article class="card"><div class="eyebrow">EXPERIMENT / ${esc(current.title)}</div><h2>감정 분석 실험실</h2><p>설정을 바꾸면 작품 분석, 추천, 감성 지도 전체가 같은 계산 규칙을 사용합니다.</p><div class="labcontrol"><div><label for="mode">분석 방식</label><select id="mode">${['frequency','weighted','context'].map(m=>`<option value="${m}" ${m===mode?'selected':''}>${modeLabel(m)}</option>`).join('')}</select></div><div><label for="strength">가중치 강도 <b id="weightVal">${strength.toFixed(1)}</b></label><input id="strength" type="range" min="0" max="2" step="0.1" value="${strength}" ${mode==='frequency'?'disabled':''}></div></div><div class="two" style="margin-top:14px"><div><h3>기준: 단순 빈도</h3>${bars(baseline)}</div><div><h3>현재 설정</h3>${bars(a)}</div></div><p>문학적 지배 정서: <b>${current.emotion}</b> · 정량 지배 정서: <b>${a.dominant||'미검출'}</b></p><p class="tiny">문학적 정서는 해석자의 질적 판단이며 정답 데이터가 아닙니다.</p></article><article class="card"><h2>검증 사례</h2><p>단순 빈도와 기본 문맥 규칙(강도 1)을 비교한 실제 계산 결과입니다.</p>${cases.map(c=>{let p=POEMS.find(x=>x.id===c.id),f=analyze(p.text,'frequency'),g=analyze(p.text,'context',1);return `<div class="case"><h3>${esc(p.title)}</h3><p>빈도: ${f.dominant} (${Math.max(...f.vector)}%) → 문맥: ${g.dominant} (${Math.max(...g.vector)}%) / 해석: ${p.emotion}</p><p>${c.why} ${c.fix}</p></div>`}).join('')}</article>`;$('mode').onchange=e=>{mode=e.target.value;list();lab()};$('strength').oninput=e=>{strength=+e.target.value;const active=$('strength');$('weightVal').textContent=strength.toFixed(1);};$('strength').onchange=()=>{list();lab()};}
-function method(){$('method').innerHTML=`<article class="card"><h2>분석 원리</h2><p>형태소 분석기를 사용하지 않는 설명 가능한 규칙 기반 시스템입니다. NFC 정규화 후 행마다 긴 구절을 먼저 탐색하고 같은 위치를 중복 계산하지 않습니다. 단순 빈도는 검출 1회당 1점, 가중치는 길이 및 반복 보정, 문맥 방식은 제한된 구절 규칙과 일부 부정 접미 표현 감쇠를 추가합니다. 점수를 전체 합으로 나누고 최대 나머지 방식으로 정수 백분율 합계 100을 맞춥니다.</p><p>유사도: 코사인 유사도. PCA: 공분산 행렬의 Jacobi 고유분해. 검출되지 않은 시는 0 벡터로 처리하고 비율을 제시하지 않습니다.</p><h2>8개 정서 사전</h2>${EMOS.map(e=>`<details class="case"><summary>${dot(e.color)} <b>${e.name}</b> · ${e.words.length}개</summary><p>${e.definition}</p><p>${e.words.join(' · ')}</p></details>`).join('')}<h2>한계</h2><p>사전은 부분 문자열을 사용하므로 동음이의어, 활용형, 반어, 문학적 상징을 완벽히 판별하지 못합니다. 일부 문맥 규칙은 수록 시에서 관찰한 사례에 기반해 일반화에 한계가 있습니다. 정량 분석은 감정의 실제 확률이나 문학적 해석의 정답이 아닙니다.</p><p>AI 사용: ChatGPT를 통한 기획·코드·해석 초안 작성. 시 원문과 해석은 제출자가 판본 및 자신의 관점으로 최종 대조해야 합니다.</p></article>`;}
-function setTab(t){tab=t;document.querySelectorAll('.panel').forEach(x=>x.hidden=x.id!==t);document.querySelectorAll('#nav button').forEach(b=>{b.classList.toggle('active',b.dataset.tab===t);b.setAttribute('aria-pressed',String(b.dataset.tab===t))});if(t==='analysis')result(current,$('analysis'));if(t==='compare')compare();if(t==='lab')lab();if(t==='method')method();if(t==='custom'&&custom)result(custom,$('customResult'));}
-$('dictCount').textContent=EMOS.reduce((n,e)=>n+e.words.length,0);EMOS.forEach(e=>{let o=document.createElement('option');o.value=e.name;o.textContent=e.name;$('filter').append(o)});$('search').oninput=list;$('filter').onchange=list;$('theme').onclick=()=>{document.body.classList.toggle('light');$('theme').textContent=document.body.classList.contains('light')?'☾ 테마':'☀ 테마'};document.querySelectorAll('#nav button').forEach(b=>b.onclick=()=>setTab(b.dataset.tab));$('runCustom').onclick=()=>{let text=$('customText').value.trim();if(!text){$('customMessage').textContent='시 본문을 입력해 주세요.';return;}$('customMessage').textContent='';custom={title:$('customTitle').value.trim()||'나의 시',author:'사용자 입력',text,id:0};result(custom,$('customResult'));};list();setTab('analysis');
-</script></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <title>시선 — POETRY SPECTRUM</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="brand" id="brandButton" aria-label="전체 보기">
+      <span class="brand-mark">詩</span>
+      <span><strong>시선</strong><small>POETRY SPECTRUM</small></span>
+    </button>
+    <div class="top-actions">
+      <span class="status"><i></i> Browser analysis</span>
+      <button class="icon-button" id="themeButton" title="테마 전환" aria-label="테마 전환">◐</button>
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <div class="sidebar-head">
+      <span>작품 목록</span><b id="poemCount">15</b>
+    </div>
+    <label class="search-box">
+      <span aria-hidden="true">⌕</span>
+      <input id="searchInput" type="search" placeholder="제목 또는 시인">
+    </label>
+    <label class="select-box">
+      <span class="sr-only">감정 필터</span>
+      <select id="emotionFilter">
+        <option value="">모든 감정</option>
+      </select>
+    </label>
+    <div id="poemList" class="poem-list"></div>
+  </aside>
+
+  <main class="workspace">
+    <nav class="tabs" aria-label="분석 영역">
+      <button class="active" data-view="work">작품 분석</button>
+      <button data-view="compare">감성 비교</button>
+      <button data-view="custom">내 시 분석</button>
+      <button data-view="method">분석 방법</button>
+    </nav>
+    <section id="workView" class="view"></section>
+    <section id="compareView" class="view" hidden></section>
+    <section id="customView" class="view" hidden></section>
+    <section id="methodView" class="view" hidden></section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
